@@ -6,10 +6,10 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Arial';
+            font-family: Arial;
+            text-align: center;
             background: linear-gradient(135deg, #ff4e50, #fc913a, #f9d423);
             color: white;
-            text-align: center;
         }
 
         .container {
@@ -81,6 +81,37 @@
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0px); }
         }
+
+        /* 🎮 GAME BUTTONS */
+        .yes-btn {
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            background: #00ff99;
+            color: black;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .yes-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .no-btn {
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            background: #ff4d4d;
+            color: white;
+            cursor: pointer;
+            position: relative;
+            transition: 0.2s;
+        }
+
     </style>
 </head>
 
@@ -99,7 +130,7 @@
 
         I hope this year brings you growth, peace, crazy adventures, success, and moments that make you smile even on bad days.<br><br>
 
-        Stay the same amazing soul you are — just a little wiser, a little stronger, and a lot happier ✨
+        Stay the same amazing soul you are ✨
     </p>
 
     <div class="gallery">
@@ -114,12 +145,39 @@
         🎉 You are not just special… you are unforgettable 💖🔥
     </div>
 
+    <!-- 🎮 GAME SECTION -->
+    <div style="margin-top:40px;">
+
+        <h2>🎮 Lets go to play match?</h2>
+
+        <button class="yes-btn" onclick="alert('Let’s gooo 🔥 see you on the field!')">
+            YES 😎
+        </button>
+
+        <button id="noBtn" class="no-btn">
+            NO 😈
+        </button>
+
+    </div>
+
 </div>
 
 <script>
     function showSurprise() {
         document.getElementById("surprise").style.display = "block";
     }
+
+    // 😈 NO button moves away prank
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", function () {
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 100);
+
+        noBtn.style.position = "absolute";
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    });
 </script>
 
 </body>
