@@ -1,25 +1,126 @@
-<body style="text-align:center; font-family:Arial; background:linear-gradient(pink,purple); color:white;">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday 🎂</title>
 
-    <h1>🎉 Happy Birthday! 🎂</h1>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial';
+            background: linear-gradient(135deg, #ff4e50, #fc913a, #f9d423);
+            color: white;
+            text-align: center;
+        }
 
-    <p>You are special ❤️</p>
+        .container {
+            padding: 50px 20px;
+        }
 
-    <img src="1.png" width="150">
-    <img src="https://via.placeholder.com/150">
-    <img src="https://via.placeholder.com/150">
+        h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
 
-    <br><br>
+        .message {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
 
-    <button onclick="document.getElementById('msg').style.display='block'">
-        Click for Surprise 🎁
-    </button>
+        .gallery {
+            margin-top: 30px;
+        }
 
-    <h2 id="msg" style="display:none;">💖 You are amazing 💖</h2>
-    <br><br>
+        .gallery img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
 
-<button onclick="alert('you are kalesh 😂')">
-    Click Me 🎁
-</button>
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            background: white;
+            color: black;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: black;
+            color: white;
+        }
+
+        #surprise {
+            display: none;
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .heart {
+            font-size: 30px;
+            animation: float 2s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heart">💖💫🎂💫💖</div>
+
+    <h1>Happy Birthday, My Friend 🎉</h1>
+
+    <p class="message">
+        Today is not just your birthday — it’s a reminder that the world got lucky the day you were born.<br><br>
+
+        You are one of those rare people who make life lighter, conversations happier, and memories unforgettable.<br><br>
+
+        I hope this year brings you growth, peace, crazy adventures, success, and moments that make you smile even on bad days.<br><br>
+
+        Stay the same amazing soul you are — just a little wiser, a little stronger, and a lot happier ✨
+    </p>
+
+    <div class="gallery">
+        <img src="1.jpg">
+        <img src="2.jpg">
+        <img src="3.jpg">
+    </div>
+
+    <button onclick="showSurprise()">Click for Surprise 🎁</button>
+
+    <div id="surprise">
+        🎉 You are not just special… you are unforgettable 💖🔥
+    </div>
+
+</div>
+
+<script>
+    function showSurprise() {
+        document.getElementById("surprise").style.display = "block";
+    }
+</script>
 
 </body>
 </html>
